@@ -71,8 +71,6 @@ flutter:
     - assets/8. sea food.jpg
     - assets/9.fast food.jpg
     - assets/10. dhonepata.jpg
-    - jsondata/foodinfo.json
-    - jsondata/healthinfo.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
