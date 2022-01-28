@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'dashboard.dart';
+
+
+
 class FoodDetails extends StatefulWidget {
   const FoodDetails({Key? key}) : super(key: key);
 
@@ -103,6 +107,7 @@ class _DashBoardState extends State<FoodDetails> {
                       fontSize: 14,
                       color: Colors.indigoAccent,
                     ),
+
                   ),
                 ),
                 const Padding(
@@ -144,6 +149,19 @@ class _DashBoardState extends State<FoodDetails> {
             ),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        foregroundColor: Colors.cyanAccent,
+        onPressed: (){
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (cotext)=>DashBoard()
+            )
+          );
+        },
+        tooltip: 'Increment',
+        child: const Icon(Icons.amp_stories),
       ),
     );
   }
