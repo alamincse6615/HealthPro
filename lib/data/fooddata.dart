@@ -1,13 +1,11 @@
-
-
-
-
 import 'dart:convert';
-
 import 'package:flutter/services.dart';
+import 'package:healthpro/model/foodmodel.dart';
 
-  Future<List<foodData>>()async{
-  final jsonData =await rootBundle.loadString("jsondata/foodinfo.json");
-      final jsonList = json.decode(jsonData) as List<dynamic>;
-      return
+class FoodData{
+  Future<List<FoodModel>> jsonfunction() async{
+    final jsonProduct = await rootBundle.loadString("jsondata/foodinfo.json");
+    final list = json.decode(jsonProduct) as List<dynamic>;
+    return list.map((e) => FoodModel.fromJson(e)).toList();
+  }
 }

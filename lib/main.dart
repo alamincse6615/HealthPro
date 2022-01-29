@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healthpro/dashboard.dart';
 
 import 'fooddetails.dart';
 
@@ -77,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: FoodDetails(),
+      home: DashBoard(),
       //ami just try r jono ai ta open korlam kaj korbar somai removo korec
     );
   }
