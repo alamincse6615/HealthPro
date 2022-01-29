@@ -292,6 +292,58 @@ class _DashBoardState extends State<HealthDetails> {
                     ),
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Container(
+                    child: new FittedBox(
+                      child:Card(
+                          elevation: 14.0,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Container(
+                                width: 250,
+                                height: 180,
+                                child: ClipRRect(
+                                  child: Image(
+                                    fit: BoxFit.contain,
+                                    alignment: Alignment.topRight,
+                                    image: AssetImage("assets/vitamin-c-bangla-health-tips.png"),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Container(
+                    child: new FittedBox(
+                      child:Card(
+                          elevation: 14.0,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Container(
+                                width: 250,
+                                height: 180,
+                                child: ClipRRect(
+                                  child: Image(
+                                    fit: BoxFit.contain,
+                                    alignment: Alignment.topRight,
+                                    image: AssetImage("assets/hilsha fish.png"),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                      ),
+                    ),
+                  ),
+                ),
               ]
           ),
         )

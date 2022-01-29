@@ -75,7 +75,11 @@ flutter:
     - assets/food4.jpg
     - assets/food_image_s.jpg
     - assets/food.png
+    - assets/vitamin-c-bangla-health-tips.png
+    - assets/hilsha fish.png
+    - assets/starthome.jpg
     - jsondata/foodinfo.json
+    -
     -
   #   - images/a_dot_ham.jpeg
 

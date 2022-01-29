@@ -53,8 +53,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('assets/food4.jpg'),
-            fit: BoxFit.cover),
+            image: AssetImage('assets/starthome.jpg'),
+            fit: BoxFit.fill),
       ),
     );
   }
