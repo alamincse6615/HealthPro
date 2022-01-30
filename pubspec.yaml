@@ -72,7 +72,11 @@ flutter:
     - assets/9.fast food.jpg
     - assets/10. dhonepata.jpg
     - assets/Jisan2.jpg
+    - assets/food4.jpg
+    - assets/food_image_s.jpg
+    - assets/food.png
     - jsondata/foodinfo.json
+    -
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

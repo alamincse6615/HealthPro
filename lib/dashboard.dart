@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+import 'fooddetails.dart';
+
+
+
 
 class DashBoard extends StatefulWidget {
   const DashBoard({Key? key}) : super(key: key);
@@ -11,11 +17,16 @@ class _DashBoardState extends State<DashBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      body: Column(
-        children: [
+        body: Column(
+          children: [
           SafeArea(
             child: Container(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/food_image_s.jpg",),
+                    fit: BoxFit.cover,
+                  )
+              ),
               child: Column(
                 children: [
                   Padding(
@@ -27,12 +38,18 @@ class _DashBoardState extends State<DashBoard> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment:CrossAxisAlignment.start,
                           children: [
-                            Text("Hello, Imam",style: TextStyle(fontSize: 30),),
-                            Text("Good Morning", style: TextStyle(fontSize: 20),),
+                            Text("Hello, Imam",
+                              style: TextStyle(
+                                  fontSize: 30),
+                            ),
+                            Text("Good Morning",
+                              style: TextStyle(
+                                  fontSize: 20),
+                            ),
                           ],
                         ),
                         CircleAvatar(
-                          backgroundImage: AssetImage("assets/Jisan2.jpg"),
+                          backgroundImage: AssetImage("assets/food.png"),
                           maxRadius: 50,
                         )
                       ],
@@ -40,8 +57,7 @@ class _DashBoardState extends State<DashBoard> {
                   )
                 ],
               ),
-              color: Colors.red,
-              height: 300,
+
             ),
           ),
           Container(
@@ -49,7 +65,8 @@ class _DashBoardState extends State<DashBoard> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text("About Food",style: TextStyle(fontSize: 25),),
-              )),
+              )
+          ),
           Container(
             height: 250,
             width: MediaQuery.of(context).size.width,
@@ -76,8 +93,7 @@ class _DashBoardState extends State<DashBoard> {
                               height:150,
                               width: MediaQuery.of(context).size.width ,
                               child: ClipRRect(
-                                child: Image.asset(
-                                  "assets/4. totato.jpg",
+                                child: Image.asset("assets/4. totato.jpg",
                                 fit: BoxFit.cover,
                                 ),
                                 borderRadius: BorderRadius.circular(30),
@@ -85,8 +101,7 @@ class _DashBoardState extends State<DashBoard> {
                             ),
                             Padding(
                               padding: const EdgeInsets.only(left: 8.0,top: 8),
-                              child: Text(
-                                  "Name",
+                              child: Text("Name",
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                       fontSize: 20,
@@ -105,7 +120,21 @@ class _DashBoardState extends State<DashBoard> {
                   );
                 }
             ),
-          )
+          ),
+            Container(
+              child: ElevatedButton(
+                child: Text("Nextpage In Heare"),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (cotext)=>FoodDetails()
+                    )
+                );
+
+                },
+              ),
+            ),
         ],
       )
     );

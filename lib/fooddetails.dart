@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'dashboard.dart';
-
-
-
+import 'healthcategory.dart';
 class FoodDetails extends StatefulWidget {
   const FoodDetails({Key? key}) : super(key: key);
 
@@ -157,7 +153,7 @@ class _DashBoardState extends State<FoodDetails> {
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (cotext)=>DashBoard()
+                  builder: (cotext)=>HealthDetails()
             )
           );
         },
