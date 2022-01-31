@@ -144,9 +144,11 @@ class _DashBoardState extends State<FoodDetails> {
                 ),
               ],
             ),
+
           ),
         ],
       ),
+
       floatingActionButton: FloatingActionButton(
         foregroundColor: Colors.cyanAccent,
         onPressed: (){
