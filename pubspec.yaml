@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   intl: ^0.16.1
   animations: ^1.0.0+5
+  carousel_slider: ^4.0.0
 
 dev_dependencies:
   flutter_test:
@@ -79,6 +80,7 @@ flutter:
     - assets/hilsha fish.png
     - assets/starthome.jpg
     - jsondata/foodinfo.json
+    - jsondata/healthinfo.json
     -
     -
   #   - images/a_dot_ham.jpeg
