@@ -27,7 +27,7 @@ class _DashBoardState extends State<DashBoard> {
         body: Column(
       children: [
         Padding(
-        padding: const EdgeInsets.symmetric(vertical: 70),
+        padding: const EdgeInsets.symmetric(horizontal: 24,vertical: 70),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
