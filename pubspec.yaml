@@ -40,6 +40,10 @@ dependencies:
   carousel_slider: ^4.0.0
   slide_to_act: ^2.0.1
   fluttertoast: ^8.0.7
+  flutter_share: ^2.0.0
+  flutter_icons: ^1.1.0
+  url_launcher: ^6.0.18
+  http: ^0.13.4
 
 
 dev_dependencies:
@@ -78,6 +82,15 @@ flutter:
     - assets/10. dhonepata.jpg
     - assets/Jisan2.jpg
     - assets/food4.jpg
+    - assets/zihad.JPG
+    - assets/nurunnobe.jpg
+    - assets/rasel.jpg
+    - assets/zisan.jpg
+    - assets/Ishak.jpg
+    - assets/imam.jpg
+    - assets/senha.jpg
+    - assets/tomal.jpg
+    - assets/mithun.jpg
     -
     - assets/1.Weight_Loss.jpeg
     - assets/2.dibetics.jpg

@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/widgets.dart';
+import 'package:healthpro/model/about_us.dart';
 import 'package:healthpro/model/foodmodel.dart';
 import 'fooddetails.dart';
+
 
 class DashBoard extends StatefulWidget {
   const DashBoard({Key? key}) : super(key: key);
@@ -553,7 +555,9 @@ class _PopupMenuContentState extends State<PopupMenuContent> with SingleTickerPr
                           children: [
                             //Repeat now
                             GestureDetector(
-                              onTap: ()=> _closePopup("About US"),
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>AboutUs()));
+                              },
                               child: Row(
                                 children: [
                                   Container(
@@ -607,7 +611,8 @@ class _PopupMenuContentState extends State<PopupMenuContent> with SingleTickerPr
                             const SizedBox(height: 16,),
 
                             GestureDetector(
-                              onTap: ()=> _closePopup("ShareNow"),
+                              onTap: (){
+                              },
                               child: Row(
                                 children: [
                                   Container(
