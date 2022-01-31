@@ -6,6 +6,4 @@ class HealthModel{
   String? image;
 
   HealthModel(this.id, this.name, this.title, this.description, this.image);
-
-  static fromJson(e) {}
 }
