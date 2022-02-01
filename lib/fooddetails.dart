@@ -1,16 +1,33 @@
 import 'package:flutter/material.dart';
 import 'healthcategory.dart';
+
 class FoodDetails extends StatefulWidget {
-  const FoodDetails({Key? key}) : super(key: key);
+
+
+  String name;
+   String title;
+   String subtitle;
+   String category;
+  String description;
+  String image;
+
+
+  FoodDetails( this.name, this.title, this.subtitle, this.category,
+      this.description, this.image);
 
   @override
   _DashBoardState createState() => _DashBoardState();
 }
 
 class _DashBoardState extends State<FoodDetails> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.name,style :TextStyle(fontSize: 16),),
+      ),
       backgroundColor: const Color(0xFFE9E9E9),
       body: CustomScrollView(
         slivers: <Widget>[
@@ -27,7 +44,8 @@ class _DashBoardState extends State<FoodDetails> {
                 borderRadius:
                 const BorderRadius.vertical(bottom: Radius.circular(40)),
                 child: Image.asset(
-                  "assets/Jisan2.jpg",
+                  widget.image
+                  ,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -40,8 +58,8 @@ class _DashBoardState extends State<FoodDetails> {
                   height: 20,
                 ),
                 ListTile(
-                  title: const Text(
-                    "Doctor Strange",
+                  title:  Text(
+                    widget.name,
                     style: TextStyle(
                       fontWeight: FontWeight.w800,
                       fontSize: 14,
@@ -54,12 +72,12 @@ class _DashBoardState extends State<FoodDetails> {
                     children: <Widget>[
                       Row(
                         mainAxisSize: MainAxisSize.min,
-                        children: const <Widget>[
+                        children: <Widget>[
                           SizedBox(
                             width: 30,
                           ),
                           Text(
-                            "First appearance",
+                            widget.category,
                             style: TextStyle(
                                 color: Colors.grey,
                                 fontWeight: FontWeight.w600,
@@ -95,22 +113,12 @@ class _DashBoardState extends State<FoodDetails> {
                 const SizedBox(
                   height: 20,
                 ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16),
-                  child: Text(
-                    "Team affiliations",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w800,
-                      fontSize: 14,
-                      color: Colors.indigoAccent,
-                    ),
 
-                  ),
-                ),
-                const Padding(
+                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 50),
                   child: Text(
-                    "Avengers Defenders Illuminati Infinity Watch Midnight Sons New AvengersThe Order",
+                    widget.title
+                  ,
                     style: TextStyle(
                       fontWeight: FontWeight.w800,
                       fontSize: 20,
@@ -121,21 +129,12 @@ class _DashBoardState extends State<FoodDetails> {
                 const SizedBox(
                   height: 20,
                 ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16),
-                  child: Text(
-                    "Stephen Strange (Marvel Cinematic Universe)",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w800,
-                      fontSize: 20,
-                      color: Colors.indigoAccent,
-                    ),
-                  ),
-                ),
-                const Padding(
+
+                 Padding(
                   padding: EdgeInsets.only(left: 16, right: 16, bottom: 32),
                   child: Text(
-                    "Doctor Stephen Strange is a fictional character appearing in American comic books published by Marvel Comics. Created by Steve Ditko with Stan Lee,[5] the character first appeared in Strange Tales #110 (cover-dated July 1963). Doctor Strange serves as the Sorcerer Supreme, the primary protector of Earth against magical and mystical threats. Strange was created during the Silver Age of Comic Books to bring a different kind of character and themes of mysticism to Marvel Comics.The character begins as an extremely talented but egotistical surgeon who loses the ability to operate after a car crash severely damages his hands beyond repair. Searching the globe for healing, he encounters the Ancient One, the Sorcerer Supreme. Strange becomes his student, and learns to be a master of both the mystical and the martial arts. He acquires an assortment of mystical objects, including the powerful Eye of Agamotto and Cloak of Levitation, and takes up residence in a mansion referred to as the Sanctum Sanctorum, located in 177A Bleecker Street, Greenwich Village, New York City. Strange assumes the title of Sorcerer Supreme and, with his friend and valet Wong, defends the world from mystical threats.The character was first portrayed in live-action by Peter Hooten in the 1978 television film Dr. Strange. Benedict Cumberbatch portrays Stephen Strange in the Marvel Cinematic Universe films Doctor Strange (2016), Thor: Ragnarok (2017), Avengers: Infinity War (2018), Avengers: Endgame (2019), and Spider-Man: No Way Home (2021). Cumberbatch also voices an alternate universe version in the Disney+ animated series What If...? (2021) and will reprise his role in the upcoming film Doctor Strange in the Multiverse of Madness (2022).",
+                    widget.description
+                    ,
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
@@ -147,20 +146,6 @@ class _DashBoardState extends State<FoodDetails> {
 
           ),
         ],
-      ),
-
-      floatingActionButton: FloatingActionButton(
-        foregroundColor: Colors.cyanAccent,
-        onPressed: (){
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (cotext)=>HealthDetails()
-            )
-          );
-        },
-        tooltip: 'Increment',
-        child: const Icon(Icons.amp_stories),
       ),
     );
   }
