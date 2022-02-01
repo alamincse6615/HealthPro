@@ -1,5 +1,6 @@
 
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
@@ -32,7 +33,7 @@ class _AboutUsState extends State<AboutUs> {
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
                   child: Container(
-                    height: 80,
+                    height: MediaQuery.of(context).size.height*.08,
                     width: MediaQuery
                         .of(context)
                         .size
@@ -64,7 +65,7 @@ class _AboutUsState extends State<AboutUs> {
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
                   child: Container(
-                    height: 200,
+                    height: MediaQuery.of(context).size.height*.30,
                     width: MediaQuery
                         .of(context)
                         .size
@@ -82,7 +83,7 @@ class _AboutUsState extends State<AboutUs> {
                                 fontSize: 25, fontWeight: FontWeight.bold),),
                             SizedBox(height: 10,),
                             Text(
-                              "If you love using this app, give a review in Google play store. It would really inspire us to keep this app alive. \nNote: Contract example123@gmail.com for any further assistance.",
+                              "If you love using this app, give a review in Google play store. It would really inspire us to keep this app alive. \nNote: Contract zihad650top@gmail.com for any further assistance.",
                               style: TextStyle(fontSize: 20),)
                           ],),
                       ),
@@ -103,7 +104,6 @@ class _AboutUsState extends State<AboutUs> {
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
                   child: Container(
-                    height:3220,
                     width: MediaQuery
                         .of(context)
                         .size
@@ -121,7 +121,7 @@ class _AboutUsState extends State<AboutUs> {
                               style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),),
                             Center(
                               child: Container(
-                                height: 330,
+                                height: MediaQuery.of(context).size.height*.45,
                                 width: MediaQuery
                                     .of(context)
                                     .size
@@ -207,7 +207,93 @@ class _AboutUsState extends State<AboutUs> {
                             SizedBox(height: 20,),
                             Center(
                               child: Container(
-                                height: 330,
+                                height: MediaQuery.of(context).size.height*.45,
+                                width: MediaQuery
+                                    .of(context)
+                                    .size
+                                    .width * .82,
+                                child: Card(
+                                  elevation: 10,
+                                  shape: OutlineInputBorder(
+                                    borderRadius: BorderRadius.only(
+                                        topRight: Radius.circular(20),
+                                        topLeft: Radius.circular(20),
+                                        bottomRight: Radius.circular(20),
+                                        bottomLeft: Radius.circular(20)),
+                                    borderSide: BorderSide(color: Colors.white),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(18.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        CircleAvatar(
+                                          backgroundImage: AssetImage(
+                                              "assets/imam.jpg"),
+                                          maxRadius: 50,
+                                        ),
+                                        SizedBox(height: 15,),
+                                        Text("HM Imam Hossen", style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 30),),
+                                        Text("AI Designation", style: TextStyle(
+                                            fontSize: 20,
+                                            color: Colors.black45,
+                                            fontStyle: FontStyle.italic),),
+                                        SizedBox(height: 15,),
+                                        Text("Flutter Developer",
+                                          style: TextStyle(fontSize: 25,
+                                              color: Colors.black),),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Row(
+                                            children: [
+                                              InkWell(
+                                                onTap: (){
+
+                                                },
+                                                child: Icon(
+                                                  (Icons.facebook), size: 50,
+                                                  color: Colors.blueAccent,),
+                                              ),
+                                              SizedBox(width: 10,),
+                                              InkWell(
+                                                  onTap: () {
+
+                                                  },
+                                                  child: Icon(
+                                                    (Icons.mail), size: 50,
+                                                    color: Colors.red,)),
+                                              SizedBox(width: 10,),
+                                              InkWell(
+                                                  onTap: () {
+
+                                                  },
+                                                  child: Icon(
+                                                    (Icons.mail), size: 50,)),
+                                              SizedBox(width: 10,),
+                                              InkWell(
+                                                onTap: (){
+                                                },
+                                                child: Icon(
+                                                  (Icons.mail), size: 50,),
+                                              ),
+                                            ],
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 20,),
+                            Center(
+                              child: Container(
+                                height: MediaQuery.of(context).size.height*.45,
                                 width: MediaQuery
                                     .of(context)
                                     .size
@@ -293,7 +379,7 @@ class _AboutUsState extends State<AboutUs> {
                             SizedBox(height: 20,),
                             Center(
                               child: Container(
-                                height: 330,
+                                height: MediaQuery.of(context).size.height*.45,
                                 width: MediaQuery
                                     .of(context)
                                     .size
@@ -379,7 +465,7 @@ class _AboutUsState extends State<AboutUs> {
                             SizedBox(height: 20,),
                             Center(
                               child: Container(
-                                height: 330,
+                                height:MediaQuery.of(context).size.height*.45,
                                 width: MediaQuery
                                     .of(context)
                                     .size
@@ -465,7 +551,7 @@ class _AboutUsState extends State<AboutUs> {
                             SizedBox(height: 20,),
                             Center(
                               child: Container(
-                                height: 330,
+                                height: MediaQuery.of(context).size.height*.45,
                                 width: MediaQuery
                                     .of(context)
                                     .size
@@ -551,93 +637,7 @@ class _AboutUsState extends State<AboutUs> {
                             SizedBox(height: 20,),
                             Center(
                               child: Container(
-                                height: 330,
-                                width: MediaQuery
-                                    .of(context)
-                                    .size
-                                    .width * .82,
-                                child: Card(
-                                  elevation: 10,
-                                  shape: OutlineInputBorder(
-                                    borderRadius: BorderRadius.only(
-                                        topRight: Radius.circular(20),
-                                        topLeft: Radius.circular(20),
-                                        bottomRight: Radius.circular(20),
-                                        bottomLeft: Radius.circular(20)),
-                                    borderSide: BorderSide(color: Colors.white),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(18.0),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                      MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                      CrossAxisAlignment.start,
-                                      children: [
-                                        CircleAvatar(
-                                          backgroundImage: AssetImage(
-                                              "assets/imam.jpg"),
-                                          maxRadius: 50,
-                                        ),
-                                        SizedBox(height: 15,),
-                                        Text("H M Imam Hossen", style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 30),),
-                                        Text("AI Designation", style: TextStyle(
-                                            fontSize: 20,
-                                            color: Colors.black45,
-                                            fontStyle: FontStyle.italic),),
-                                        SizedBox(height: 15,),
-                                        Text("Flutter Developer",
-                                          style: TextStyle(fontSize: 25,
-                                              color: Colors.black),),
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Row(
-                                            children: [
-                                              InkWell(
-                                                onTap: (){
-
-                                                },
-                                                child: Icon(
-                                                  (Icons.facebook), size: 50,
-                                                  color: Colors.blueAccent,),
-                                              ),
-                                              SizedBox(width: 10,),
-                                              InkWell(
-                                                  onTap: () {
-
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.mail), size: 50,
-                                                    color: Colors.red,)),
-                                              SizedBox(width: 10,),
-                                              InkWell(
-                                                  onTap: () {
-
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.mail), size: 50,)),
-                                              SizedBox(width: 10,),
-                                              InkWell(
-                                                onTap: (){
-                                                },
-                                                child: Icon(
-                                                  (Icons.mail), size: 50,),
-                                              ),
-                                            ],
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            SizedBox(height: 20,),
-                            Center(
-                              child: Container(
-                                height: 330,
+                                height: MediaQuery.of(context).size.height*.45,
                                 width: MediaQuery
                                     .of(context)
                                     .size
@@ -723,7 +723,7 @@ class _AboutUsState extends State<AboutUs> {
                             SizedBox(height: 20,),
                             Center(
                               child: Container(
-                                height: 330,
+                                height:MediaQuery.of(context).size.height*.45,
                                 width: MediaQuery
                                     .of(context)
                                     .size
@@ -809,7 +809,7 @@ class _AboutUsState extends State<AboutUs> {
                             SizedBox(height: 20,),
                             Center(
                               child: Container(
-                                height: 330,
+                                height: MediaQuery.of(context).size.height*.45,
                                 width: MediaQuery
                                     .of(context)
                                     .size
@@ -907,9 +907,10 @@ class _AboutUsState extends State<AboutUs> {
                   ),
                 ),
               ),
-
             ],
+
           ),
+
         ],
       ),
     );
